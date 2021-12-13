@@ -19,7 +19,7 @@ export const query = graphql`
     }
   }
 `
-function Hero (props) {
+function Hero(props) {
   return (
     <div className={container}>
       <h1 className={intro}>Welcome to the GatsbyJS + Shopify Demo Store.</h1>
@@ -47,11 +47,25 @@ function Hero (props) {
   )
 }
 
-export default function IndexPage({ data }) {
+export default function IndexPage({ data, serverData }) {
   return (
     <Layout>
       <Hero />
       <ProductListing products={data?.shopifyCollection?.products} />
+      <img src={serverData.message} width="200" height="200" alt="cool dog" />
     </Layout>
   )
+}
+
+export async function getServerData({ query }) {
+  const res = await fetch("https://dog.ceo/api/breeds/image/random")
+  const data = await res.json()
+
+  if (query.error) {
+    throw new Error("Error fetching dog from API")
+  }
+
+  return {
+    props: data,
+  }
 }
