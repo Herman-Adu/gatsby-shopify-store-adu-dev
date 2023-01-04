@@ -202,8 +202,10 @@ export default function Product({ data: { product, suggestions } }) {
               </span>
               <span className={labelFont}>Tags</span>
               <span className={tagList}>
-                {product.tags.map((tag) => (
-                  <Link to={`/search?t=${tag}`}>{tag}</Link>
+                {product.tags.map((tag, index) => (
+                  <Link key={index} to={`/search?t=${tag}`}>
+                    {tag}
+                  </Link>
                 ))}
               </span>
             </div>
@@ -215,7 +217,7 @@ export default function Product({ data: { product, suggestions } }) {
 }
 
 export const query = graphql`
-  query($id: String!, $productType: String!) {
+  query ($id: String!, $productType: String!) {
     product: shopifyProduct(id: { eq: $id }) {
       title
       description

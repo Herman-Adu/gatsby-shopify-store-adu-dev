@@ -5,9 +5,9 @@ import { ProductListing } from "../components/product-listing"
 import {
   container,
   intro,
-  callOut,
-  callToAction,
-  deployButton,
+  // callOut,
+  // callToAction,
+  // deployButton,
 } from "./index.module.css"
 
 export const query = graphql`
