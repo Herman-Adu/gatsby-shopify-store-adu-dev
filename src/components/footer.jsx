@@ -17,31 +17,20 @@ export function Footer() {
         <div className={logos}>
           <Logo />
         </div>
-        <strong>gatsby-starter-shopify</strong> change this by editing{" "}
-        <code>src/components/footer.jsx</code>
+        Welcome to the<strong> Gatsby shopify demo store</strong> utilising
+        shopify's new<strong> custom app</strong> and latest{" "}
+        <strong>web-hook</strong>, providing the latest
+        <strong> payment services</strong>, better <strong>security</strong>,
+        and<strong> customer experience</strong>
+        <br />
+        <br />
+        hosted on <strong>gatsby cloud</strong>.
       </div>
       <nav className={links} aria-label="footer">
         <ul className={footerNavList}>
           <li className={footerNavListItem}>
-            <a href="https://github.com/gatsbyjs/gatsby-starter-shopify">
-              Source Code and Docs
-            </a>
+            <a href="https://www.adudev.co.uk">About Adu Dev</a>
           </li>
-          <li className={footerNavListItem}>
-            <a href="https://www.gatsbyjs.com/cloud/">About Gatsby Cloud</a>
-          </li>
-          {process.env.GATSBY_DEMO_STORE === "true" && (
-            <li className={footerNavListItem}>
-              <a href="https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-shopify&utm_campaign=shopify-starter">
-                <img
-                  src="https://www.gatsbyjs.com/deploynow.png"
-                  alt="Deploy to Gatsby Cloud"
-                  height="38"
-                  width="251"
-                />
-              </a>
-            </li>
-          )}
         </ul>
       </nav>
       <div className={copyright}>

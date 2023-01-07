@@ -22,7 +22,9 @@ export const query = graphql`
 function Hero(props) {
   return (
     <div className={container}>
-      <h1 className={intro}>Welcome to the GatsbyJS + Shopify Demo Store.</h1>
+      <h1 className={intro}>
+        Welcome to the Gatsby Cloud, Shopify Demo Store.
+      </h1>
     </div>
   )
 }
